@@ -1,19 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Text Modifier Extension",
-  "version": "1.0",
-  "description": "Mengganti teks Microsoft menjadi Microslop dan Linux menjadi Loonixtards secara otomatis di semua website.",
-  "permissions": [
-    "scripting"
-  ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
+  "name": "Text Modifier Extension (Seamless)",
+  "version": "1.2",
+  "description": "Mengganti teks secara instan tanpa flash menggunakan strategi Duet JS + CSS.",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
+      "css": ["style.css"],
       "js": ["content.js"],
-      "run_at": "document_idle"
+      "run_at": "document_start"
     }
   ]
 }

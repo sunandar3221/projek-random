@@ -1,0 +1,11 @@
+/* Sembunyikan elemen yang sedang diproses */
+.sneaky-replace-hide {
+    opacity: 0 !important;
+    transition: opacity 0.15s ease-in !important;
+}
+
+/* Khusus untuk root element (html) agar tidak kelap-kelip saat load awal */
+html.sneaky-replace-hide {
+    opacity: 0 !important;
+    transition: none !important; /* Instan di awal, tanpa transisi */
+}
